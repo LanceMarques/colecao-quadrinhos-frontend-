@@ -1,0 +1,94 @@
+<ngx-loading [show]="loading"></ngx-loading>
+
+<div
+  class="modal fade"
+  id="modalCriarEmprestimo"
+  tabindex="-1"
+  (keydown.enter)="onCadastrar()"
+>
+  <div class="modal-dialog " role="document">
+    <div class="box box-solid">
+      <div class="box-header">
+        <i class="fa fa-book" aria-hidden="true"></i>
+
+        <h3 class="box-title">
+          <strong>
+            Novo Empréstimo
+          </strong>
+        </h3>
+      </div>
+      <!-- /.box-header -->
+      <div class="box-body">
+        <form [formGroup]="form">
+          <div class="col-md-12 col-xs-12">
+            <div class="form-group">
+              <label>Amigo*</label>
+              <br />
+              <p-autoComplete
+                [(ngModel)]="amigo.nome"
+                formControlName="amigo"
+                [suggestions]="amigosFiltrados"
+                (completeMethod)="onConsultarAmigo($event)"
+                (onSelect)="onAmigoSelecionado($event)"
+              >
+                <ng-template let-amigo pTemplate="item">
+                  <p class="select-amigo">
+                    {{ amigo.nome }} ({{ amigo.apelido }})
+                  </p>
+                </ng-template>
+              </p-autoComplete>
+            </div>
+          </div>
+          <div class="col-md-12 col-xs-12">
+            <div class="form-group">
+              <label>Volumes*</label>
+              <br />
+              <p-autoComplete
+                [suggestions]="volumesFiltrados"
+                formControlName="emprestimoTemQuadrinho"
+                (completeMethod)="onConsultarVolume($event)"
+                [multiple]="true"
+              >
+                <ng-template let-volume pTemplate="item">
+                  <p>
+                    {{ volume.titulo.titulo | shorten: 20 }} - Vol.
+                    {{ volume.volume }}
+                  </p>
+                </ng-template>
+                <ng-template let-volume pTemplate="selectedItem">
+                  <p>
+                    {{ volume.titulo.titulo | shorten: 20 }} -
+                    {{ volume.volume }}
+                  </p>
+                </ng-template>
+              </p-autoComplete>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="box-footer">
+        <div class="acoes col-md-12 col-xs-12">
+          <button
+            type="button"
+            class="btn btn-danger"
+            data-toggle="modal"
+            data-target="#modalCriarEmprestimo"
+            (click)="onCancelar()"
+            #closebutton
+          >
+            <i class="fa fa-times" aria-hidden="true"></i>Cancelar
+          </button>
+          <button
+            type="button"
+            class="btn btn-success"
+            [disabled]="!form.valid"
+            (click)="onCadastrar()"
+          >
+            <i class="fa fa-check" aria-hidden="true"></i>
+            Cadastrar
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

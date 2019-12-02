@@ -1,0 +1,27 @@
+<mt-criar-colecao></mt-criar-colecao>
+<mt-editar-colecao></mt-editar-colecao>
+<section class="content-header">
+  <h1>
+    Todos os Mangás
+    <a class="search-link pull-right">
+      <a #openbutton data-toggle="modal" data-target="#modalCriarColecao">
+        <i class="fa fa-plus-circle"></i>
+      </a>
+    </a>
+  </h1>
+</section>
+
+<section class="content">
+  <div class="row">
+    <div class="col-sm-12 col-xs-12 colecoes-vazias" *ngIf="exibir">
+      <h4>
+        <strong>
+          Não há nenhuma coleção cadastrada ainda.
+        </strong>
+      </h4>
+    </div>
+    <div *ngFor="let colecao of colecoes" class="col-sm-6 col-xs-12">
+      <mt-colecao [colecao]="colecao"></mt-colecao>
+    </div>
+  </div>
+</section>

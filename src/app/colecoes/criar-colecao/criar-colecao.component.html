@@ -1,0 +1,134 @@
+<!-- Botão para acionar modal -->
+<ngx-loading [show]="loading"></ngx-loading>
+
+<div
+  class="modal fade"
+  id="modalCriarColecao"
+  tabindex="-1"
+  (keydown.enter)="onCadastrar()"
+>
+  <div class="modal-dialog " role="document">
+    <div class="box box-solid">
+      <div class="box-header">
+        <i class="fa fa-book" aria-hidden="true"></i>
+
+        <h3 class="box-title">
+          <strong>
+            Nova Coleção
+          </strong>
+        </h3>
+      </div>
+      <!-- /.box-header -->
+      <div class="box-body">
+        <form [formGroup]="form">
+          <div class="col-md-12 col-xs-12">
+            <div class="form-group container-img">
+              <img [src]="urlCapa" alt="box" />
+              <div class="img-input">
+                <label>URL da imagem</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  formControlName="urlImagem"
+                  id="urlImagem"
+                  aria-describedby="emailHelp"
+                />
+                <div class="btn-update">
+                  <button
+                    type="button"
+                    class="btn btn-success btn-update-component"
+                    (click)="onChangeUrl()"
+                  >
+                    <i class="fa fa-refresh" aria-hidden="true"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-xs-12">
+            <div class="form-group">
+              <label>Título*</label>
+              <input
+                type="text"
+                class="form-control"
+                formControlName="titulo"
+                id="titulo"
+                aria-describedby="emailHelp"
+              />
+              <small id="emailHelp" class="form-text text-muted"></small>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-xs-12">
+            <div class="form-group">
+              <label>Editora*</label>
+              <input
+                type="text"
+                class="form-control"
+                formControlName="editora"
+                id="editora"
+                aria-describedby="emailHelp"
+              />
+              <small id="emailHelp" class="form-text text-muted"></small>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-xs-12">
+            <div class="form-group">
+              <label>Tipo do Quadrinho*</label>
+              <select
+                class="form-control"
+                formControlName="tipoQuadrinho"
+                id="tipoQuadrinho"
+              >
+                <option value="MANGA">Mangá</option>
+                <option value="SHOUNEN">Shounen</option>
+              </select>
+              <small id="emailHelp" class="form-text text-muted"></small>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-xs-12">
+            <div class="form-group">
+              <label>Estado da Coleção*</label>
+              <select
+                class="form-control"
+                formControlName="estadoColecao"
+                id="estadoColecao"
+              >
+                <option value="ABERTO">Em aberto</option>
+                <option value="FINALIZADO">Finalizado</option>
+                <option value="DESCONTINUADO">Descontinuado</option>
+              </select>
+              <small id="emailHelp" class="form-text text-muted"></small>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="box-footer">
+        <div class="acoes col-md-12 col-xs-12">
+          <button
+            type="button"
+            class="btn btn-danger"
+            data-toggle="modal"
+            data-target="#modalCriarColecao"
+            (click)="onCancelar()"
+            #closebutton
+          >
+            <i class="fa fa-times" aria-hidden="true"></i>Cancelar
+          </button>
+          <button
+            type="button"
+            class="btn btn-success"
+            [disabled]="!form.valid"
+            (click)="onCadastrar()"
+          >
+            <i class="fa fa-check" aria-hidden="true"></i>
+            Cadastrar
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

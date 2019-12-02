@@ -1,0 +1,67 @@
+<mt-criar-volume></mt-criar-volume>
+<mt-editar-volume></mt-editar-volume>
+<section class="content-header">
+  <h1></h1>
+</section>
+
+<section class="content">
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="box box-solid">
+        <div class="box-header with-border">
+          <h3>
+            <i class="fa fa-home" [routerLink]="'/'"></i>
+            <strong> {{ colecao.titulo }} ({{ colecao.editora }}) </strong>
+          </h3>
+          <!-- Botão para acionar modal -->
+          <a data-toggle="modal" data-target="#modalCriarVolume">
+            <i class="fa fa-plus-circle"></i>
+          </a>
+        </div>
+        <!-- /.box-header -->
+        <div class="box-body">
+          <div class="col-sm-3 col-xs-12" *ngIf="true">
+            <img class="box-img-detail" [src]="colecao.urlImagem" />
+          </div>
+
+          <dl class="col-sm-9 col-xs-12">
+            <dt>Tipo do Quadrinho</dt>
+            <dd>
+              {{ colecao.tipoQuadrinho }}
+            </dd>
+            <dt>
+              Estado da Coleção
+            </dt>
+            <dd>
+              {{ colecao.estadoColecao }}
+            </dd>
+            <dt>
+              <span><i class="fa fa-star"></i> {{ colecao.avaliacao }}</span>
+            </dt>
+          </dl>
+        </div>
+        <!-- /.box-body -->
+      </div>
+    </div>
+    <!-- /.col-xs-12 -->
+  </div>
+  <section class="content content-volumes">
+    <div class="row volumes">
+      <h4><strong> Volumes</strong></h4>
+    </div>
+  </section>
+
+  <div class="row">
+    <div class="col-sm-12 col-xs-12 volumes-vazios" *ngIf="exibir">
+      <h4>
+        <strong>
+          Não há nenhum volume cadastrado ainda.
+        </strong>
+      </h4>
+    </div>
+    <div *ngFor="let volume of volumes" class="col-md-6 col-xs-12">
+      <mt-item-volume [volume]="volume"></mt-item-volume>
+    </div>
+  </div>
+</section>
+<!-- FIM DO CONTEÚDO -->

@@ -1,0 +1,137 @@
+<!-- Botão para acionar modal -->
+<ngx-loading [show]="loading"></ngx-loading>
+
+<div
+  class="modal fade"
+  id="modalCriarVolume"
+  tabindex="-1"
+  (keydown.enter)="onCadastrar()"
+>
+  <div class="modal-dialog " role="document">
+    <div class="box box-solid">
+      <div class="box-header">
+        <i class="fa fa-book" aria-hidden="true"></i>
+
+        <h3 class="box-title">
+          <strong>
+            Novo Volume
+          </strong>
+        </h3>
+      </div>
+      <!-- /.box-header -->
+      <div class="box-body">
+        <form [formGroup]="form">
+          <div class="col-md-12 col-xs-12">
+            <div class="form-group container-img">
+              <img [src]="urlCapa" alt="box" />
+              <div class="img-input">
+                <label>URL da imagem</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  formControlName="urlImagem"
+                  id="urlImagem"
+                  aria-describedby="emailHelp"
+                />
+                <div class="btn-update">
+                  <button
+                    type="button"
+                    class="btn btn-success btn-update-component"
+                    (click)="onChangeUrl()"
+                  >
+                    <i class="fa fa-refresh" aria-hidden="true"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 col-xs-12">
+            <div class="form-group">
+              <label>Volume*</label>
+              <input
+                type="number"
+                min="1"
+                class="form-control"
+                formControlName="volume"
+                id="volume"
+                aria-describedby="emailHelp"
+              />
+              <small id="emailHelp" class="form-text text-muted"></small>
+            </div>
+          </div>
+
+          <div class="col-md-4 col-xs-12">
+            <div class="form-group">
+              <label>Quantidade*</label>
+              <input
+                min="0"
+                type="number"
+                class="form-control"
+                formControlName="quantidade"
+                id="quantidade"
+                aria-describedby="emailHelp"
+              />
+              <small id="emailHelp" class="form-text text-muted"></small>
+            </div>
+          </div>
+
+          <div class="col-md-4 col-xs-12">
+            <div class="form-group">
+              <label>Valor (R$)*</label>
+              <input
+                min="0"
+                step="0.05"
+                value="0.00"
+                type="number"
+                formControlName="valor"
+                class="form-control"
+                id="valor"
+                aria-describedby="emailHelp"
+              />
+              <small id="emailHelp" class="form-text text-muted"></small>
+            </div>
+          </div>
+
+          <div class="col-md-4 col-xs-12">
+            <div class="form-group">
+              <label>Estado de conservação*</label>
+              <select
+                formControlName="estadoConservacao"
+                class="form-control"
+                id="estadoConservacao"
+              >
+                <option value="NOVO">Novo</option>
+                <option value="USADO">Usado</option>
+              </select>
+              <small id="emailHelp" class="form-text text-muted"></small>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="box-footer">
+        <div class="acoes col-md-12 col-xs-12">
+          <button
+            type="button"
+            class="btn btn-danger"
+            data-toggle="modal"
+            data-target="#modalCriarVolume"
+            (click)="onCancelar()"
+            #closebutton
+          >
+            <i class="fa fa-times" aria-hidden="true"></i>Cancelar
+          </button>
+          <button
+            type="button"
+            class="btn btn-success"
+            [disabled]="!form.valid"
+            (click)="onCadastrar()"
+          >
+            <i class="fa fa-check" aria-hidden="true"></i>
+            Cadastrar
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

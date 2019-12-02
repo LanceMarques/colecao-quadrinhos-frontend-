@@ -1,0 +1,17 @@
+.acao {
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+.box-colecao:hover {
+  transform: scale(1.05);
+  box-shadow: -8px 8px 18px rgb(32, 0, 64);
+  transition: 0.4s;
+}
+/* 200040 */
+/*  */
+
+a {
+  cursor: pointer;
+  color: #fff;
+}

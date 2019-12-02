@@ -1,0 +1,42 @@
+<div class="menu-item-info-box">
+  <span class="menu-item-info-box-icon">
+    <img class="img-volume-detalhe" [src]="volume.urlImagem"
+  /></span>
+
+  <div class="menu-item-info-box-content">
+    <span class="menu-item-info-box-text">Volume {{ volume.volume }}</span>
+    <span class="menu-item-info-box-detail">
+      <p>
+        <strong>
+          Estado de Conservação:
+        </strong>
+
+        {{ volume.estadoConservacao }}
+      </p>
+      <p>
+        <strong>
+          Quantidade:
+        </strong>
+        {{ volume.quantidade }}
+      </p>
+    </span>
+    <span class="menu-item-info-box-price">
+      {{ volume.valor | currency: "BRL":true }}
+    </span>
+    <div class="acoes" *ngIf="mostrarAcoes">
+      <a
+        #openbutton
+        data-toggle="modal"
+        data-target="#modalEditarVolume"
+        (click)="onEditar(volume)"
+        class="acao__editar"
+      >
+        <i class="fa fa-pencil"></i> Editar</a
+      >
+      <a (click)="onExcluir(volume.id)" class="acao__excluir"
+        ><i class="fa fa-trash"></i> Excluir</a
+      >
+    </div>
+  </div>
+  <!-- /.info-box-content -->
+</div>

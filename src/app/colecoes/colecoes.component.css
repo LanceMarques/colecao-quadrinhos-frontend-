@@ -1,0 +1,19 @@
+.content-header {
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.fa-plus-circle {
+  font-size: 40px;
+  margin-top: 10px;
+  position: absolute;
+  right: 10px;
+  top: 0px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.colecoes-vazias {
+  display: flex;
+  justify-content: center;
+}

@@ -1,0 +1,90 @@
+<!-- Botão para acionar modal -->
+<ngx-loading [show]="loading"></ngx-loading>
+
+<div
+  class="modal fade"
+  id="modalCriarAmigo"
+  tabindex="-1"
+  (keydown.enter)="onCadastrar()"
+>
+  <div class="modal-dialog " role="document">
+    <div class="box box-solid">
+      <div class="box-header">
+        <i class="fa fa-book" aria-hidden="true"></i>
+
+        <h3 class="box-title">
+          <strong>
+            Novo Amigo
+          </strong>
+        </h3>
+      </div>
+      <!-- /.box-header -->
+      <div class="box-body">
+        <form [formGroup]="form">
+          <div class="col-md-6 col-xs-12">
+            <div class="form-group">
+              <label>Nome*</label>
+              <input
+                type="text"
+                class="form-control"
+                formControlName="nome"
+                id="nome"
+                aria-describedby="emailHelp"
+              />
+              <small id="emailHelp" class="form-text text-muted"></small>
+            </div>
+          </div>
+          <div class="col-md-6 col-xs-12">
+            <div class="form-group">
+              <label>Apelido*</label>
+              <input
+                type="text"
+                class="form-control"
+                formControlName="apelido"
+                id="apelido"
+                aria-describedby="emailHelp"
+              />
+              <small id="emailHelp" class="form-text text-muted"></small>
+            </div>
+          </div>
+          <div class="col-md-6 col-xs-12">
+            <div class="form-group">
+              <label>Celular*</label>
+              <input
+                type="text"
+                class="form-control"
+                formControlName="celular"
+                id="celular"
+                aria-describedby="emailHelp"
+              />
+              <small id="emailHelp" class="form-text text-muted"></small>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="box-footer">
+        <div class="acoes col-md-12 col-xs-12">
+          <button
+            type="button"
+            class="btn btn-danger"
+            data-toggle="modal"
+            data-target="#modalCriarAmigo"
+            (click)="onCancelar()"
+            #closebutton
+          >
+            <i class="fa fa-times" aria-hidden="true"></i>Cancelar
+          </button>
+          <button
+            type="button"
+            class="btn btn-success"
+            [disabled]="!form.valid"
+            (click)="onCadastrar()"
+          >
+            <i class="fa fa-check" aria-hidden="true"></i>
+            Cadastrar
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

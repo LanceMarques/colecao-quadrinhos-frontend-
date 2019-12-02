@@ -1,0 +1,33 @@
+.fa-home {
+  margin-left: 10px;
+}
+
+.box-header .with-border {
+  display: flex;
+}
+
+.volumes {
+  background-color: #8000ff;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.content-volumes {
+  min-height: 0 !important;
+}
+
+.volumes-vazios {
+  display: flex;
+  justify-content: center;
+}
+
+.fa-plus-circle {
+  font-size: 40px;
+  margin-top: 10px;
+  position: absolute;
+  right: 10px;
+  top: 0px;
+  color: #fff;
+  cursor: pointer;
+}

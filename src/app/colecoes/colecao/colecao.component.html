@@ -1,0 +1,46 @@
+<a>
+  <div class="place-info-box box-colecao">
+    <span class="place-info-box-icon"
+      ><img
+        [routerLink]="['/colecoes', colecao.id]"
+        id="img__manga"
+        [src]="colecao.urlImagem"
+    /></span>
+
+    <div class="place-info-box-content">
+      <span class="place-info-box-text">{{ colecao.titulo }}</span>
+      <span class="place-info-box-star">
+        <!-- ACOES -->
+        <a
+          #openbutton
+          data-toggle="modal"
+          data-target="#modalEditarColecao"
+          (click)="onEditar(colecao)"
+        >
+          <i class="fa fa-pencil acao" aria-hidden="true"></i>
+        </a>
+        <i
+          class="fa fa-trash acao"
+          (click)="excluir(colecao.id)"
+          aria-hidden="true"
+        ></i>
+      </span>
+      <span class="place-info-box-detail">
+        <i class="fa fa-star"></i> {{ colecao.avaliacao }}
+      </span>
+      <span class="place-info-box-detail">
+        <strong>
+          Tipo:
+        </strong>
+        {{ colecao.tipoQuadrinho }}</span
+      >
+      <span class="place-info-box-detail">
+        <strong>
+          Estado da coleção:
+        </strong>
+        {{ colecao.estadoColecao }}
+      </span>
+    </div>
+    <!-- /.info-box-content -->
+  </div>
+</a>

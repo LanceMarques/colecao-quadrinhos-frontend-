@@ -1,0 +1,22 @@
+.acao__editar {
+  margin-right: 10px;
+  color: #200040;
+  font-weight: 700;
+  font-size: 17px;
+}
+
+.acao__excluir {
+  font-weight: 700;
+  color: #200040;
+  font-size: 17px;
+}
+
+.acoes {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.img-volume-detalhe {
+  height: 175px;
+  width: 120px;
+}

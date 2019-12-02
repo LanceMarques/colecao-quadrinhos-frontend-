@@ -1,0 +1,369 @@
+/* You can add global styles to this file, and also import other style files */
+
+body {
+  color: #fff;
+}
+
+.ui-autocomplete-token {
+  padding-top: 13px;
+  font-size: 13px;
+  padding-right: 20px;
+}
+
+body .ui-autocomplete-panel .ui-autocomplete-items .ui-autocomplete-list-item {
+  color: #5a6997;
+}
+.ui-autocomplete-list-item:hover {
+  color: #fff !important;
+}
+
+body .ui-widget,
+body .ui-widget .ui-widget,
+body .ui-widget input {
+  border-radius: 0;
+}
+.msg-erro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box {
+  background-color: #200040;
+}
+.box-footer {
+  background-color: #40007f;
+  border: none;
+}
+
+.main-footer {
+  background-color: #200040;
+  border: none;
+}
+
+.content-wrapper {
+  background-color: #40007f;
+}
+
+.box-header {
+  padding: 0px;
+  color: inherit;
+  display: flex;
+  align-items: center;
+}
+.box-body {
+  margin-bottom: 5px;
+}
+
+.main-header {
+  background-color: #200040;
+  display: flex;
+  align-items: center;
+}
+
+#img__manga {
+  border: 1px solid #333;
+  height: 175px;
+  width: 120px;
+}
+
+.skin-red .main-header .navbar {
+  background-color: #200040;
+  height: 60px;
+  display: flex;
+  align-items: center;
+}
+
+/*
+ * Component: Place Info Box
+ * -------------------
+ */
+.place-info-box {
+  color: #fff;
+  display: block;
+  min-height: 120px;
+  height: 190px;
+  background: #8000ff;
+  width: 100%;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
+  margin-bottom: 15px;
+  padding: 8px;
+}
+.place-info-box small {
+  font-size: 14px;
+}
+.place-info-box .progress {
+  background: rgba(0, 0, 0, 0.2);
+  margin: 5px -10px 5px -10px;
+  height: 2px;
+}
+.place-info-box .progress,
+.place-info-box .progress .progress-bar {
+  border-radius: 0;
+}
+.place-info .progress .progress-bar {
+  background: #fff;
+}
+.place-info-box-icon {
+  border-top-left-radius: 2px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 2px;
+  display: block;
+  float: left;
+  /*height: 120px;*/
+  width: 120px;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.2);
+}
+.place-info-box-icon > img {
+  max-width: 100%;
+  /*border-right: 1px solid rgba(0, 0, 0, 0.1);*/
+}
+.place-info-box-content {
+  padding: 5px 10px;
+  margin-left: 120px;
+}
+.place-info-box-detail {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 5px;
+  width: 100%;
+}
+
+.place-info-box-text {
+  display: block;
+  font-size: 18px;
+  font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  width: 80%;
+  float: left;
+}
+.place-info-box-text {
+}
+
+.place-info-box-star {
+  display: block;
+  font-size: 18px;
+  font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 10px;
+  width: 20%;
+  float: right;
+}
+.place-info-box-more {
+  display: block;
+}
+.progress-description {
+  margin: 0;
+}
+
+/* Detail For restaurant */
+
+.box-img-detail {
+  width: 140px;
+  height: 180px;
+}
+
+.box-body dl {
+  font-size: 18px;
+}
+
+/*
+ * Component: Menu Item
+ * -------------------
+ */
+.menu-item-info-box {
+  color: #555;
+  display: block;
+  min-height: 120px;
+  background: #fff;
+  width: 100%;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
+  margin-bottom: 15px;
+}
+.menu-item-info-box small {
+  font-size: 14px;
+}
+.menu-item-info-box .progress {
+  background: rgba(0, 0, 0, 0.2);
+  margin: 5px -10px 5px -10px;
+  height: 2px;
+}
+.menu-item-info-box .progress,
+.menu-item-info-box .progress .progress-bar {
+  border-radius: 0;
+}
+.menu-item-info .progress .progress-bar {
+  background: #fff;
+}
+.menu-item-info-box-icon {
+  border-top-left-radius: 2px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 2px;
+  display: block;
+  float: left;
+  /*height: 120px;*/
+  width: 120px;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.2);
+}
+.menu-item-info-box-icon > img {
+  max-width: 100%;
+  /*border-right: 1px solid rgba(0, 0, 0, 0.1);*/
+}
+.menu-item-info-box-price {
+  font-weight: bold;
+  margin-right: 20px;
+  font-size: 16px;
+}
+
+.menu-item-info-box-content {
+  background: #8000ff;
+  color: #fff;
+  padding: 0px 15px;
+  margin-left: 120px;
+  height: 176px;
+}
+
+.menu-item-info-box-content a {
+  cursor: pointer;
+}
+
+.menu-item-info-box-detail {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+.menu-item-info-box-text {
+  display: block;
+  font-size: 18px;
+  font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 10px;
+  width: 80%;
+}
+.menu-item-info-box-text {
+}
+
+.menu-item-info-box-more {
+  display: block;
+}
+
+.table-striped > tbody > tr:nth-of-type(odd) {
+  background-color: #6000bf;
+  color: #fff;
+  font-weight: 700;
+}
+
+.table-striped > thead > tr {
+  background-color: #200040;
+  color: #fff;
+  font-weight: 700;
+}
+
+.table-striped > tbody > tr:nth-of-type(even) {
+  background-color: #40007f;
+  color: #fff;
+  font-weight: 700;
+}
+
+td {
+  border: none !important;
+}
+
+th {
+  border: none !important;
+}
+/**
+ buttons
+*/
+
+.btn-success:hover {
+  /* background: transparent; */
+  background-color: #00a65a !important;
+}
+
+.btn-danger:hover {
+  background-color: #dd4b39 !important;
+}
+
+.danger {
+  color: #dd4b39;
+  display: inline;
+}
+
+/*Jumbotrons*/
+
+.jumbotron {
+  background-color: #fff;
+  text-align: center;
+}
+.jumbotron h2 {
+  font-size: 40px;
+}
+
+.welcome-jumbotron h1 {
+  margin-bottom: 60px;
+}
+
+.welcome-jumbotron p {
+  margin-bottom: 60px;
+  font-size: 30px;
+}
+
+/* inputs */
+
+.fancy-radio {
+  position: absolute;
+  opacity: 0;
+}
+
+/*Review*/
+.review-score {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+/*rstaurant detail*/
+
+.detail-footer {
+  padding: 0px;
+  display: flex;
+  justify-content: center;
+}
+
+.detail-footer > a {
+  text-align: center;
+  font-size: 16px;
+  color: #555;
+  width: 50%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.detail-footer > a:hover {
+  outline: none;
+  text-decoration: none;
+}
+
+.detail-active {
+  border-bottom: 2px solid #dd4b39;
+}
+
+.has-error-block {
+  color: #dd4b39;
+}

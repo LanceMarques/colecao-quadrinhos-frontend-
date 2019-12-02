@@ -1,0 +1,47 @@
+.fa-plus-circle {
+  font-size: 40px;
+  margin-top: 10px;
+  position: absolute;
+  right: 10px;
+  top: 0px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.content-header {
+  margin-top: 20px;
+}
+
+.table-main {
+  margin-top: 30px;
+}
+
+table {
+  margin-bottom: 0px !important;
+}
+
+.table-collapsed {
+  background: #200040;
+}
+
+i {
+  font-size: 18px;
+  cursor: pointer;
+}
+
+i:not(:last-child) {
+  margin-right: 10px;
+}
+
+.hiddenRow {
+  padding: 0 !important;
+}
+
+.accordian-body {
+  background: #200040;
+  padding-top: 15px;
+}
+
+.fa-th-list {
+  color: #fff;
+}

@@ -1,0 +1,40 @@
+{
+  "volumes": [
+    {
+      "id": 1,
+      "volume": 100,
+      "titulo": {
+        "nome": "Naruto"
+      },
+      "estadoConservacao": "NOVO",
+      "quantidade": 100
+    },
+    {
+      "id": 2,
+      "volume": 101,
+      "titulo": {
+        "nome": "Naruto"
+      },
+      "estadoConservacao": "NOVO",
+      "quantidade": 100
+    },
+    {
+      "id": 3,
+      "volume": 102,
+      "titulo": {
+        "nome": "Naruto"
+      },
+      "estadoConservacao": "NOVO",
+      "quantidade": 100
+    },
+    {
+      "id": 4,
+      "volume": 103,
+      "titulo": {
+        "nome": "Naruto"
+      },
+      "estadoConservacao": "NOVO",
+      "quantidade": 100
+    }
+  ]
+}

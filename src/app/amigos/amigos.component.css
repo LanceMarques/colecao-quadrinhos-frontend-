@@ -1,0 +1,24 @@
+.content-header {
+  margin-top: 20px;
+}
+
+table {
+  margin-top: 30px;
+}
+
+i {
+  font-size: 18px;
+  cursor: pointer;
+  margin-left: 10px;
+  color: #fff;
+}
+
+.fa-plus-circle {
+  font-size: 40px;
+  margin-top: 10px;
+  position: absolute;
+  right: 10px;
+  top: 0px;
+  color: #fff;
+  cursor: pointer;
+}

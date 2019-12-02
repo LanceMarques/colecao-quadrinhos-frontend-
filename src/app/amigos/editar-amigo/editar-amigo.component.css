@@ -1,0 +1,37 @@
+.fa-plus-circle {
+  font-size: 40px;
+  margin-top: 10px;
+  position: absolute;
+  right: 10px;
+  top: 0px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.box-header {
+  padding-top: 20px;
+  padding-left: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.form-group {
+  padding: 0;
+}
+
+.primeiro-input {
+  padding-right: 20px;
+}
+
+.acoes {
+  display: flex;
+  justify-content: flex-end;
+}
+
+button:not(:last-child) {
+  margin-right: 10px;
+}
+
+.modal {
+  color: #fff;
+}
