@@ -7,4 +7,4 @@ export const environment = {
   production: false,
   urlbase: "https://colecao-quadrinhos.herokuapp.com"
 };
-// urlbase: "http://192.168.15.123:8000"
+// urlbase: "http://127.0.0.1:8000"
